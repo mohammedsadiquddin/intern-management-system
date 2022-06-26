@@ -1,4 +1,10 @@
 <?php
+ini_set('display_errors', 0);
+ini_set('display_startup_errors', 0);
+session_start();
+if(!$_SESSION['internemail']){
+  header("location: index.php");
+}
 include 'header.php';
 include 'dbconnect_pu.php';
 ?>
